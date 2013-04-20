@@ -1,6 +1,56 @@
+#java specific
 *.class
+build/*
+dist/*
+build
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# logs, databases and schemas
+*.log
+*.sql
+*.dbschema
+
+# netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+nbproject
+build.xml
+
+# -- Sistemas Operativos ------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.*
+!.gitignore
+*~
+
+# Mac OS X
+.DS_Store
+.DS_Store?
+._.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+#Other files
+*~
+*.lock
+*.swp
+*.out
