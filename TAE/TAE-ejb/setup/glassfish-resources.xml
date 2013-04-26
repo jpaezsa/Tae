@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <mail-resource debug="true" enabled="true" from="siaihsa@gmail.com" host="smtp.gmail.com" jndi-name="mail/gmail" object-type="user" store-protocol="imap" store-protocol-class="com.sun.mail.imap.IMAPStore" transport-protocol="smtp" transport-protocol-class="com.sun.mail.smtp.SMTPTransport" user="siaihsa@gmail.com">
+        <description/>
+        <property name="mail.smtp.auth" value="true"/>
+        <property name="mail.smtp.socketFactory.fallback" value="false"/>
+        <property name="mail.smtp.port" value="465"/>
+        <property name="mail.smtp.password" value="muyfacil"/>
+        <property name="mail.smtp.socketFactory.port" value="465"/>
+        <property name="mail.smtp.socketFactory.class" value="javax.net.ssl.SSLSocketFactory"/>
+        <property name="mail.smtp.starttls.enable" value="true"/>
+    </mail-resource>
+    <jdbc-resource enabled="true" jndi-name="jdbc/__taePool" object-type="user" pool-name="__taePool">
+        <description/>
+    </jdbc-resource>
+    <jdbc-connection-pool 
+    allow-non-component-callers="false" 
+    associate-with-thread="false" 
+    connection-creation-retry-attempts="0" 
+    connection-creation-retry-interval-in-seconds="10" 
+    connection-leak-reclaim="false" 
+    connection-leak-timeout-in-seconds="0" 
+    connection-validation-method="table" 
+    datasource-classname="org.firebirdsql.pool.sun.AppServerDataSource" 
+    fail-all-connections="false" 
+    idle-timeout-in-seconds="300" 
+    is-connection-validation-required="false" 
+    is-isolation-level-guaranteed="true" 
+    lazy-connection-association="false" 
+    lazy-connection-enlistment="false" 
+    match-connections="false" 
+    max-connection-usage-count="0" 
+    max-pool-size="32" 
+    max-wait-time-in-millis="60000" 
+    name="__taePool" 
+    non-transactional-connections="false" 
+    ping="false" 
+    pool-resize-quantity="2" 
+    pooling="true" 
+    res-type="javax.sql.DataSource" 
+    statement-cache-size="0" 
+    statement-leak-reclaim="false" 
+    statement-leak-timeout-in-seconds="0" 
+    statement-timeout-in-seconds="-1" 
+    steady-pool-size="2" 
+    validate-atmost-once-period-in-seconds="0" 
+    wrap-jdbc-objects="true">
+        <property name="DatabaseName" value="mtyvwdvsrv/3050:Sia"/>
+        <property name="User" value="TAE"/>
+        <property name="Password" value="TaeDb.2013"/>
+        <property name="CharSet" value="ISO-8859-1"/>
+        <property name="Encoding" value="ISO8859_1"/>
+        <property name="PingStatement" value="SELECT cast(1 AS INTEGER) FROM rdb$database"/>
+        <property name="DefaultIsolation" value="TRANSACTION_READ_COMMITTED"/>
+        <property name="Type" value="TYPE4"/>
+        <property name="SqlDialect" value="3"/>
+        <property name="RetryInterval" value="1000"/>
+        <property name="PingInterval" value="5000"/>
+        <property name="MaxldleTime" value="2147483"/>
+        <property name="LoginTimeout" value="5"/>
+        <property name="MinPoolSize" value="0"/>
+        <property name="MaxPoolSize" value="10"/>
+        <property name="MaxStatements" value="1000"/>
+        <property name="BlockingTimeout" value="5000"/>
+    </jdbc-connection-pool>       
+</resources>
